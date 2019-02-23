@@ -1,0 +1,29 @@
+﻿@model APIRecipeProject.Models.Registration
+<style>
+
+    .field-validation-error {
+        color: red;
+    }
+</style>
+@{
+    ViewBag.Title = "Register";
+}
+
+<p>
+    @using (Html.BeginForm("Registration", "Home", FormMethod.Post))
+    {
+        @Html.ValidationMessageFor(x => x.Name)
+        @Html.LabelFor(x => x.Name)
+        @Html.EditorFor(x => x.Name)
+        @Html.ValidationMessageFor(x => x.UserName)
+        @Html.LabelFor(x => x.UserName)
+        @Html.EditorFor(x => x.UserName)
+        @Html.ValidationMessageFor(x => x.Password)
+        @Html.LabelFor(x => x.Password)
+        @Html.EditorFor(x => x.Password)
+        @Html.ValidationMessageFor(x => x.Email)
+        @Html.LabelFor(x => x.Email)
+        @Html.EditorFor(x => x.Email)
+        <button type="submit">Register</button>
+    }
+</p>

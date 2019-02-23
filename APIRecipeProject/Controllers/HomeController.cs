@@ -1,6 +1,10 @@
-﻿using System;
+﻿using APIRecipeProject.Models;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -26,5 +30,14 @@ namespace APIRecipeProject.Controllers
 
             return View();
         }
-    }
+        public ActionResult Registration()
+        {
+            return View();
+        }
+        public ActionResult Login()
+        {
+            return View();
+        }
+        
+}
 }
