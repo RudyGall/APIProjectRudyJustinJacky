@@ -89,3 +89,7 @@ C:\Users\rudye\source\repos\APIRecipeProject\APIRecipeProject\obj\Debug\APIRecip
 C:\Users\rudye\source\repos\APIRecipeProject\APIRecipeProject\obj\Debug\APIRecipeProject.csproj.CopyComplete
 C:\Users\rudye\source\repos\APIRecipeProject\APIRecipeProject\obj\Debug\APIRecipeProject.dll
 C:\Users\rudye\source\repos\APIRecipeProject\APIRecipeProject\obj\Debug\APIRecipeProject.pdb
+C:\Users\rudye\source\repos\APIRecipeProject\APIRecipeProject\bin\EntityFramework.dll
+C:\Users\rudye\source\repos\APIRecipeProject\APIRecipeProject\bin\EntityFramework.SqlServer.dll
+C:\Users\rudye\source\repos\APIRecipeProject\APIRecipeProject\bin\EntityFramework.xml
+C:\Users\rudye\source\repos\APIRecipeProject\APIRecipeProject\bin\EntityFramework.SqlServer.xml
