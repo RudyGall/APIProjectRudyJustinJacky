@@ -15,11 +15,47 @@ namespace APIRecipeProject.Controllers
         private RecipeEntities db = new RecipeEntities();
 
         // GET: UserInfoes
-        public ActionResult Index()
+        public ActionResult Registration()
         {
             return View(db.UserInfoes.ToList());
         }
+        public ActionResult Login()
+        {
+ 
+            return View();
+        }
+        public ActionResult UserHome()
+        {
+            ViewBag.Name = Session["Name"];
+            ViewBag.UserName = Session["UserName"];
+            ViewBag.Now = DateTime.Now;
+            return View();
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(LoginModel model)
+        {
+            if(!ModelState.IsValid)
+            {               
+                return View(model);
+            }
+            var email = model.Email;
+            var pass = model.Password;
+            UserInfo userFound = db.UserInfoes.Where(x => x.Email == email && x.Password== pass).FirstOrDefault();
+            if(userFound == null)
+            {
+                return View();
+            }
+            else
+            {
+                Session["UserID"] = userFound.UserID;
+                Session["Name"] = userFound.Name;
+                Session["UserName"] = userFound.UserName;
+                return RedirectToAction("UserHome");
+            }
+            //return RedirectToAction("Registration");
+        }
         // GET: UserInfoes/Details/5
         public ActionResult Details(int? id)
         {
@@ -36,7 +72,7 @@ namespace APIRecipeProject.Controllers
         }
 
         // GET: UserInfoes/Create
-        public ActionResult Create()
+        public ActionResult Register()
         {
             return View();
         }
@@ -46,13 +82,13 @@ namespace APIRecipeProject.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,Name,UserName,Password,Email")] UserInfo userInfo)
+        public ActionResult Register([Bind(Include = "UserID,Name,UserName,Password,Email")] UserInfo userInfo)
         {
             if (ModelState.IsValid)
             {
                 db.UserInfoes.Add(userInfo);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
 
             return View(userInfo);
@@ -84,7 +120,7 @@ namespace APIRecipeProject.Controllers
             {
                 db.Entry(userInfo).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Registration");
             }
             return View(userInfo);
         }
@@ -112,7 +148,7 @@ namespace APIRecipeProject.Controllers
             UserInfo userInfo = db.UserInfoes.Find(id);
             db.UserInfoes.Remove(userInfo);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Registration");
         }
 
         protected override void Dispose(bool disposing)

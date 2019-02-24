@@ -1,0 +1,43 @@
+﻿@model APIRecipeProject.Models.LoginModel
+<style>
+
+    .field-validation-error {
+        color: red;
+    }
+</style>
+@{
+    ViewBag.Title = "Login";
+}
+<h2>Login</h2>
+
+<p>
+    @using (Html.BeginForm("Login", "UserInfoes", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Password)
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.ValidationMessageFor(x => x.Email)                   
+                    @Html.EditorFor(x => x.Email)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(x => x.Password)
+                    @Html.EditorFor(x => x.Password)
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Log in</button>
+    }
+</p>
+
+<div>
+    @Html.ActionLink("Back to List", "Registration")
+</div>
