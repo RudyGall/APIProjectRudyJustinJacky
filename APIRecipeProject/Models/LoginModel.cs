@@ -9,10 +9,10 @@ namespace APIRecipeProject.Models
     public class LoginModel
     {
         [Required]
-        [StringLength(21)]
+        [StringLength(20)]
         public string Password { get; set; }
         [Required]
-        [StringLength(36)]
+        [StringLength(35)]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
     }

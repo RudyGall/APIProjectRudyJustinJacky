@@ -36,7 +36,16 @@ namespace APIRecipeProject.Controllers
             var email = model.Email;
             var pass = model.Password;
             UserInfo userFound = db.UserInfoes.Where(x => x.Email == email && x.Password== pass).FirstOrDefault();
-            return RedirectToAction("Registration");
+            if(userFound == null)
+            {
+                return View();
+            }
+            else
+            {
+                Session["UserID"] = userFound.UserID;
+                return RedirectToAction("UserRecipes");
+            }
+            //return RedirectToAction("Registration");
         }
         // GET: UserInfoes/Details/5
         public ActionResult Details(int? id)
