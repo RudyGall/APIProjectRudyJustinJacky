@@ -24,6 +24,13 @@ namespace APIRecipeProject.Controllers
  
             return View();
         }
+        public ActionResult UserHome()
+        {
+            ViewBag.Name = Session["Name"];
+            ViewBag.UserName = Session["UserName"];
+            ViewBag.Now = DateTime.Now;
+            return View();
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -43,7 +50,9 @@ namespace APIRecipeProject.Controllers
             else
             {
                 Session["UserID"] = userFound.UserID;
-                return RedirectToAction("UserRecipes");
+                Session["Name"] = userFound.Name;
+                Session["UserName"] = userFound.UserName;
+                return RedirectToAction("UserHome");
             }
             //return RedirectToAction("Registration");
         }
