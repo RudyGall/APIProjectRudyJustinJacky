@@ -30,13 +30,13 @@ namespace APIRecipeProject.Controllers
         public ActionResult Login(LoginModel model)
         {
             if(!ModelState.IsValid)
-            {
+            {               
                 return View(model);
             }
             var email = model.Email;
             var pass = model.Password;
             UserInfo userFound = db.UserInfoes.Where(x => x.Email == email && x.Password== pass).FirstOrDefault();
-            return View();
+            return RedirectToAction("Registration");
         }
         // GET: UserInfoes/Details/5
         public ActionResult Details(int? id)
