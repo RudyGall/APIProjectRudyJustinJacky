@@ -156,11 +156,30 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MovieFavoritesController.cs" />
     <Compile Include="Controllers\UserInfoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\MovieFavorite.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MovieFavorite.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovieFavorite.cs">
+      <DependentUpon>RecipeUserInfoDBmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovieFavorite.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MovieFavorite.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovieFavorite1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MovieFavorite.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\RecipeUserInfoDBmodel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +210,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\MovieFavorite.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MovieFavorite.edmx</DependentUpon>
+      <LastGenOutput>MovieFavorite.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\MovieFavorite.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MovieFavorite.edmx</DependentUpon>
+      <LastGenOutput>MovieFavorite1.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\RecipeUserInfoDBmodel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RecipeUserInfoDBmodel.edmx</DependentUpon>
@@ -212,6 +241,13 @@
     </EntityDeploy>
     <Content Include="Models\RecipeUserInfoDBmodel.edmx.diagram">
       <DependentUpon>RecipeUserInfoDBmodel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\MovieFavorite.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MovieFavorite.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\MovieFavorite.edmx.diagram">
+      <DependentUpon>MovieFavorite.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -245,6 +281,11 @@
     <Content Include="Views\UserInfoes\Edit.cshtml" />
     <Content Include="Views\UserInfoes\Registration.cshtml" />
     <Content Include="Views\UserInfoes\UserHome.cshtml" />
+    <Content Include="Views\MovieFavorites\Create.cshtml" />
+    <Content Include="Views\MovieFavorites\Delete.cshtml" />
+    <Content Include="Views\MovieFavorites\Details.cshtml" />
+    <Content Include="Views\MovieFavorites\Edit.cshtml" />
+    <Content Include="Views\MovieFavorites\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
