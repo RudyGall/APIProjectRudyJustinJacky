@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RecipeModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MovieFavorite">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Rated" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Genre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Metascore" Type="Double" />
+    <Property Name="imdbRating" Type="Double" />
+    <Property Name="BoxOffice" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="RecipeEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MovieFavorites" EntityType="Self.MovieFavorite" />
+  </EntityContainer>
+</Schema>
