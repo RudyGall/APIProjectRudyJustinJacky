@@ -12,5 +12,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="MovieFavorites">
+      <EntityTypeMapping TypeName="RecipeModel.MovieFavorite">
+        <MappingFragment StoreEntitySet="MovieFavorites">
+          <ScalarProperty Name="BoxOffice" ColumnName="BoxOffice" />
+          <ScalarProperty Name="imdbRating" ColumnName="imdbRating" />
+          <ScalarProperty Name="Metascore" ColumnName="Metascore" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="Rated" ColumnName="Rated" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

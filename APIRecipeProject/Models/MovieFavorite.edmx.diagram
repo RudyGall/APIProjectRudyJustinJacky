@@ -4,9 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="417ebc1cfc1a4344935818a851fdcb56" Name="Diagram1">
-        <EntityTypeShape EntityType="RecipeModel.UserInfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RecipeModel.MovieFavorite" Width="1.5" PointX="3.375" PointY="0.75" />
+      <Diagram DiagramId="96264a0dd80e42f3aaaaa5b579624261" Name="Diagram1">
+        <EntityTypeShape EntityType="RecipeModel1.MovieFavorite" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

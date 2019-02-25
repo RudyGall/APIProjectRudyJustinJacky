@@ -13,10 +13,10 @@ namespace APIRecipeProject.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RecipeEntities : DbContext
+    public partial class RecipeEntities1 : DbContext
     {
-        public RecipeEntities()
-            : base("name=RecipeEntities")
+        public RecipeEntities1()
+            : base("name=RecipeEntities1")
         {
         }
     
@@ -25,7 +25,6 @@ namespace APIRecipeProject.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<UserInfo> UserInfoes { get; set; }
         public virtual DbSet<MovieFavorite> MovieFavorites { get; set; }
     }
 }
