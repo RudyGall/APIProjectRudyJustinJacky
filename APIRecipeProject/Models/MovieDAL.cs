@@ -36,15 +36,20 @@ namespace APIRecipeProject.Models
 
             JObject movieJson = JObject.Parse(output);
 
-            List<JToken> movieTokens = movieJson["?"]["?"].ToList();
+            List<JToken> movieTokens = movieJson["Title"]["Year"]["Rated"]["Genre"]["Metascore"]["imdbRating"]["BoxOffice"].ToList();
 
             for (int i = 0; i < movieTokens.Count; i++)
             {
                 MovieFavorite movie = new MovieFavorite();
 
-                movie.? = movieTokens[i]["?"]["?"].ToString();
-                movie.? = movieTokens[i]["?"]["?"].ToString();
-                movie.? = "/" + movieTokens[i]["?"]["?"].ToString();
+                movie.Title = movieTokens[i]["Title"].ToString();
+                movie.Year = movieTokens[i]["Year"].ToString(Year);
+                movie.Rated = movieTokens[i]["Rated"].ToString();
+                movie.Genre = movieTokens[i]["Genre"].ToString();
+                movie.Metascore = movieTokens[i]["Metascore"].ToString();
+                movie.imdbRating = movieTokens[i]["imdbRating"].ToString();
+                movie.BoxOffice = movieTokens[i]["BoxOffice"].ToString();
+
                 movies.Add(movie);
             }
 
