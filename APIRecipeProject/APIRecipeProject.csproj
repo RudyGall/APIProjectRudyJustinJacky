@@ -162,7 +162,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginModel.cs" />
-<<<<<<< HEAD
     <Compile Include="Models\MovieFavorite.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -181,9 +180,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MovieFavorite.tt</DependentUpon>
     </Compile>
-=======
     <Compile Include="Models\MovieDAL.cs" />
->>>>>>> 58bc1e66421cb44f79bc7b37f532bacc60438e65
     <Compile Include="Models\RecipeUserInfoDBmodel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
