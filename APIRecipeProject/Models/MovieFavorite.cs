@@ -14,6 +14,19 @@ namespace APIRecipeProject.Models
     
     public partial class MovieFavorite
     {
+        private string output;
+        private int i;
+
+        public MovieFavorite()
+        {
+        }
+
+        public MovieFavorite(string output, int i)
+        {
+            this.output = output;
+            this.i = i;
+        }
+
         public int ID { get; set; }
         public string Title { get; set; }
         public Nullable<int> Year { get; set; }
