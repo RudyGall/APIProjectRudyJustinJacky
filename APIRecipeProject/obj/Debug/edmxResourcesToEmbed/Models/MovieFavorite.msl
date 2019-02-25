@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RecipeModel1StoreContainer" CdmEntityContainer="RecipeEntities1">
+    <EntitySetMapping Name="MovieFavorites">
+      <EntityTypeMapping TypeName="RecipeModel1.MovieFavorite">
+        <MappingFragment StoreEntitySet="MovieFavorites">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Rated" ColumnName="Rated" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="Metascore" ColumnName="Metascore" />
+          <ScalarProperty Name="imdbRating" ColumnName="imdbRating" />
+          <ScalarProperty Name="BoxOffice" ColumnName="BoxOffice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
