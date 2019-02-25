@@ -1,0 +1,23 @@
+﻿@model IEnumerable<APIRecipeProject.Models.UserInfo>
+
+@{
+    ViewBag.Title = "UserHome";
+}
+
+<h2>User Home</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.UserName</title>
+</head>
+<body>
+    <div>
+        <h2>@ViewBag.UserName</h2>
+        <h3>Welcome @ViewBag.Name</h3>
+        <h4>Date and Time: @ViewBag.Now</h4>
+    </div>
+</body>
+</html>
