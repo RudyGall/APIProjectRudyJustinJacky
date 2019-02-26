@@ -162,43 +162,28 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginModel.cs" />
-    <Compile Include="Models\MovieFavorite.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MovieFavorite.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MovieFavorite.cs">
-      <DependentUpon>RecipeUserInfoDBmodel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MovieFavorite.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MovieFavorite.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MovieFavorite1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MovieFavorite.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\MovieDAL.cs" />
-    <Compile Include="Models\RecipeUserInfoDBmodel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RecipeUserInfoDBmodel.Context.tt</DependentUpon>
+    <Compile Include="Models\MovieFavorite.cs">
+      <DependentUpon>Recipe.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\RecipeUserInfoDBmodel.cs">
+    <Compile Include="Models\Recipe.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RecipeUserInfoDBmodel.tt</DependentUpon>
+      <DependentUpon>Recipe.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\RecipeUserInfoDBmodel.Designer.cs">
+    <Compile Include="Models\Recipe.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RecipeUserInfoDBmodel.edmx</DependentUpon>
+      <DependentUpon>Recipe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Recipe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Recipe.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Registration.cs" />
     <Compile Include="Models\UserInfo.cs">
-      <DependentUpon>RecipeUserInfoDBmodel.tt</DependentUpon>
+      <DependentUpon>Recipe.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -211,44 +196,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\MovieFavorite.Context.tt">
+    <Content Include="Models\Recipe.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MovieFavorite.edmx</DependentUpon>
-      <LastGenOutput>MovieFavorite.Context.cs</LastGenOutput>
+      <DependentUpon>Recipe.edmx</DependentUpon>
+      <LastGenOutput>Recipe.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\MovieFavorite.tt">
+    <Content Include="Models\Recipe.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MovieFavorite.edmx</DependentUpon>
-      <LastGenOutput>MovieFavorite1.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\RecipeUserInfoDBmodel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RecipeUserInfoDBmodel.edmx</DependentUpon>
-      <LastGenOutput>RecipeUserInfoDBmodel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\RecipeUserInfoDBmodel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RecipeUserInfoDBmodel.edmx</DependentUpon>
-      <LastGenOutput>RecipeUserInfoDBmodel.cs</LastGenOutput>
+      <DependentUpon>Recipe.edmx</DependentUpon>
+      <LastGenOutput>Recipe.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\RecipeUserInfoDBmodel.edmx">
+    <EntityDeploy Include="Models\Recipe.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RecipeUserInfoDBmodel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Recipe.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\RecipeUserInfoDBmodel.edmx.diagram">
-      <DependentUpon>RecipeUserInfoDBmodel.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="Models\MovieFavorite.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MovieFavorite.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\MovieFavorite.edmx.diagram">
-      <DependentUpon>MovieFavorite.edmx</DependentUpon>
+    <Content Include="Models\Recipe.edmx.diagram">
+      <DependentUpon>Recipe.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
